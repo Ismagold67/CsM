@@ -19,8 +19,8 @@ body {
 
 .details {
     display: none;
-    padding: 20px;
     border-radius: 10px;
+    margin-top: 10px;
 
     & .back-button {
         margin-top: -80px;
