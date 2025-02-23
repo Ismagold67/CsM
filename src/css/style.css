@@ -110,6 +110,19 @@ body {
     padding-bottom: 10px;
 }
 
+/* Aplicado ao elemento desejado, por exemplo, com a classe 'scroll-hide' */
+.scroll-hide {
+    overflow: auto;               /* Permite o scroll */
+    -ms-overflow-style: none;     /* IE e Edge */
+    scrollbar-width: none;        /* Firefox */
+}
+  
+  /* Para navegadores baseados em Webkit (Chrome, Safari, Opera) */
+ .scroll-hide::-webkit-scrollbar {
+    display: none;
+ }
+  
+
 .course {
     min-width: 200px;
     max-width: 220px; /* Define um limite para evitar expansão */
