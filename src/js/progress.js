@@ -12,11 +12,14 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.error("Nenhum curso encontrado:", data);
             return;
         }
+        const h2_header = document.querySelector(".progress-container h2")
+        const user_name = data.courses[0].user_name
 
         // 🔹 Simula o progresso baseado na quantidade de cursos
         let progress = Math.min(30, data.courses.length * 10); // 10% por curso
         progressPercentage.textContent = `${progress}%`;
         progressBar.style.width = `${progress}%`;
+        h2_header.textContent = `Olá, ${user_name}`
 
         // 🔹 Renderiza os cursos em andamento
         data.courses.slice(0, 4).forEach(course => { // Pega no máximo 4 cursos para exibição
