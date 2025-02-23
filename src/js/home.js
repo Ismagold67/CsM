@@ -20,8 +20,9 @@ async function fetchCourses() {
 }
 
 function showCourseDetails(course) {
-    document.querySelector(".course-list").style.display = "none"; // Esconde a lista de cursos
+    document.querySelectorAll(".course-list").forEach(item => {item.style.display = "none"; })// Esconde a lista de cursos
     document.querySelector(".header").style.display = "none"; // Esconde a HEADER
+    document.querySelectorAll(".section-title").forEach(item => {item.style.display = "none";}) // Esconde a HEADER
     const details = document.querySelector(".details");
     const rating = Number(course.average_rating).toFixed(1);
     const starsHTML = generateStarsHTML(rating);
@@ -38,8 +39,9 @@ function showCourseDetails(course) {
 // Voltar para a lista de cursos
 document.querySelector(".back-button").addEventListener("click", () => {
     document.querySelector(".details").style.display = "none"; // Esconde os detalhes
-    document.querySelector(".courses-list").style.display = "block"; // Exibe os cursos novamente
+    document.querySelectorAll(".course-list").forEach(item => {item.style.display = "flex";}) // Exibe os cursos novamente
     document.querySelector(".header").style.display = "flex";  // Exibe a header novamente
+    document.querySelectorAll(".section-title").forEach(item => {item.style.display = "block"}); 
 });
 
 
