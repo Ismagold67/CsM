@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <link rel="stylesheet" href="../src/css/search_page.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 🔎 Barra de Pesquisa -->
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Pesquisar cursos ou instrutores...">
+            <div id="search-suggestions" class="suggestions"></div> <!-- 🔹 Adicionada essa linha -->
+        </div>
+        
+
+        <!-- 📌 Sugestões de Cursos -->
+        <div class="section-title">Sugestões</div>
+        <div class="course-list"></div>
+
+        <!-- 🏆 Instrutores Bem Avaliados -->
+        <div class="section-title">Instrutores bem avaliados</div>
+        <div class="instructors-list" id="instructors-list"></div>
+
+        <div class="details">
+            <img onclick="window.history.back()" class="back-button" src="../src/imgs/left-arrow-alt-regular-48.png">
+    
+            <div class="course-header">
+                <img id="course-image" src="" alt="Imagem do Curso">
+                <h2 id="course-title"></h2>
+                <p id="course-instructor"></p>
+                <p id="course-rating">⭐ 4.5</p><br>
+                <p id="course-description"></p><br>
+            </div>
+    
+            <button class="btn-add"><strong>Adicionar ao Aprendizado</strong></button>
+            <button class="btn-interest"> <img src="../src/imgs/like.png" alt=""> <strong>Lista de Interesses</strong></button>
+    
+            <div class="conteudo">
+                <h2>Conteúdo do curso</h2>
+                <br>
+                <ul>
+                    <li>Compreender e configurar contas seguras no Whatsapp, Facebook, Instagram, etc.</li><br>
+                    <li>Enviar mensagens, fotos e vídeos, além de realizar chamadas de vídeo com familiares e amigos.</li><br>
+                    <li>Postar fotos e vídeos nas redes sociais, criando memórias digitais com facilidade.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/courses.js" ></script>
+    <script src="../src/js/search.js"></script>
+    <script src="https://kit.fontawesome.com/e829e347c9.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

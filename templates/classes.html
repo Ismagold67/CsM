@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas</title>
+    <link rel="stylesheet" href="../src/css/classes.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <script src="https://kit.fontawesome.com/e829e347c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" id="aulas-container">
+        <header>
+            <img onclick="goBack()" class="back-button" src="../src/imgs/left-arrow-alt-regular-48.png">
+            <h2>Aulas</h2>
+        </header>
+        
+        <section class="module">
+            <h3>Modulo 01 - Introdução</h3>
+            <div class="lesson" onclick="openMaterials()">
+                <i class="fa-solid fa-play"></i>
+                <p>Explorando o Office 365: Uma visão geral <br> vídeo - 2h 30min</p>
+            </div>
+            <div class="lesson" onclick="openMaterials()">
+                <i class="fa-solid fa-play"></i>
+                <p>Explorando o Office 365: Uma visão geral <br> vídeo - 2h 30min</p>
+            </div>
+            <div class="lesson" onclick="openMaterials()">
+                <i class="fa-solid fa-play"></i>
+                <p>Explorando o Office 365: Uma visão geral <br> vídeo - 2h 30min</p>
+            </div>
+        </section>
+
+        <section class="module">
+            <h3>Modulo 02 - Principais Aplicativos</h3>
+            <div class="lesson" onclick="openMaterials()">
+                <i class="fa-solid fa-play"></i>
+                <p>Explorando o Office 365: Uma visão geral <br> vídeo - 2h 30min</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="container" id="materiais-container" style="display: none;">
+        <header>
+            <img onclick="goBackToAulas()" class="back-button" src="../src/imgs/left-arrow-alt-regular-48.png">
+        </header>
+        
+        <div class="video-player">
+            <video controls>
+                <source src="../src/videos/video.mp4">
+            </video>
+        </div>
+        
+        <h1>Materiais</h1><br>
+        <div class="material-item">
+            <i class="fa-solid fa-file"></i>
+            <p>Passo_a_passo_da_explicação_do_vídeo.pdf</p>
+        </div>
+        <div class="material-item">
+            <i class="fa-solid fa-file"></i>
+            <p>Passo_a_passo_da_explicação_do_vídeo.pdf</p>
+        </div>
+    </div>
+    
+    <script>
+        function openMaterials() {
+            document.getElementById('aulas-container').style.display = 'none';
+            document.getElementById('materiais-container').style.display = 'block';
+        }
+        
+        function goBackToAulas() {
+            document.getElementById('materiais-container').style.display = 'none';
+            document.getElementById('aulas-container').style.display = 'block';
+        }
+        
+        function goBack() {
+            window.location.href = "progress.html";
+        }
+    </script>
+</body>
+</html>

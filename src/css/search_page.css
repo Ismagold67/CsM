@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* 🔎 Barra de Pesquisa */
+
+/* 🔎 Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #e6e6e6;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.search-bar i {
+    color: #888;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+}
+
+/* 🏆 Instrutores Bem Avaliados */
+.instructors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.instructor {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.instructor img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.instructor-info h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.instructor-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+/* 🔎 Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #e6e6e6;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    position: relative; /* 🔹 Agora a `.suggestions` será posicionada corretamente */
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+}
+
+/* 🔎 Lista de Sugestões */
+.suggestions {
+    position: absolute;
+    top: 100%; /* 🔹 Coloca a lista logo abaixo do campo de pesquisa */
+    left: 0;
+    width: 100%; /* 🔹 Agora a largura será igual à da barra de pesquisa */
+    background: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 10; /* 🔹 Garante que as sugestões fiquem sobre outros elementos */
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.suggestion-item:hover {
+    background: #f0f0f0;
+}

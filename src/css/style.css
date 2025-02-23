@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #EDF0F2;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+
+.details {
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+
+    & .back-button {
+        margin-top: -80px;
+    }
+}
+
+
+.details button img {
+    width: 100%;
+    max-width: 8%;
+}
+
+.details button:nth-of-type(1) {
+    width: 100%;
+    padding: 17px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 10px;
+    color: #EDF0F2;
+    font-size: 20px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(54,54,163,1) 0%, rgba(0,176,255,1) 100%);
+    border: none;
+}
+
+.details button:nth-of-type(2) {
+    background-color: #82C7A5; /* Exemplo de alteração */
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 10px;
+    color: #EDF0F2;
+    font-size: 20px;
+    border: none;
+}
+
+
+#course-image {
+    width: 100%;
+    max-width: 100%; /* Define um tamanho máximo */
+    height: 200px; /* Mantém a proporção */
+    object-fit: cover; /* Garante que a imagem não fique esticada */
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    
+    & h2 {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header h2 {
+    font-size: 18px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.course-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+.course {
+    min-width: 200px;
+    max-width: 220px; /* Define um limite para evitar expansão */
+    border-radius: 8px;
+    flex-shrink: 0; 
+    margin-right: 35px;
+}
+
+.course img {
+    width: 243px;/* Define um tamanho máximo */
+    height: 147px; /* Mantém a proporção */
+    object-fit: cover; /* Garante que a imagem não fique esticada */
+    border-radius: 8px;
+    display: block;
+}
+
+.conteudo {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    padding: 20px;
+    & ul {
+        font-size: 14px;
+        list-style-type: square;
+        margin-left: 20px;
+    }
+}
+
+.course h3 {
+    font-size: 14px;
+    margin: 5px 0;
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Compatibilidade com navegadores */
+    white-space: normal; /* Permite que o texto quebre para a próxima linha */
+    text-align: left; /* Centraliza o título */
+}
+
+.course p {
+    font-size: 12px;
+    color: #555;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: left; /* Centraliza o texto */
+}
+
+.stars {
+    color: gold;
+    font-size: 14px;
+}
+
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: block;
+    margin: 20px auto;
+} 
+
+.star-color {
+    color: #989300
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+Oculta a imagem até ser carregada 
+.course img {
+    display: none;
+}

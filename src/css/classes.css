@@ -1,0 +1,91 @@
+/* 📌 Tela de Aulas */
+.aulas {
+    display: block;
+}
+
+.aulas h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.module {
+    margin-bottom: 20px;
+}
+
+.module-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.lesson {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.lesson i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* 📌 Tela de Materiais */
+.materiais {
+    display: none;
+}
+
+.video-container {
+    background: black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container i {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.materiais h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.material-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-bottom: 10px;
+    gap: 15px;
+
+    & i {
+        font-size: 20px;
+    }
+}
+
+.material i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.video-player {
+    position: relative;
+
+    & video {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
