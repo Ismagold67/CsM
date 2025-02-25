@@ -1,4 +1,4 @@
 
 const config = {
-    backendUrl: '',
+    backendUrl: 'https://ismagold69.pythonanywhere.com/',
 };
