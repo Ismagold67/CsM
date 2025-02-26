@@ -11,7 +11,7 @@ async function fetchCourses() {
         }
 
         // 🔹 Renderiza os cursos na página principal usando a função reutilizável
-        renderCourses(data.courses, "course-list");
+        renderCourses(data.courses, "course-list", 'course');
         h2_header.textContent = `Olá, ${user_name}`
 
     } catch (error) {

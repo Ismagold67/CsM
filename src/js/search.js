@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            renderCourses(data.courses.slice(0, 10), "course-list"); // 🔹 Mostra 10 cursos recomendados
+            renderCourses(data.courses.slice(0, 10), "course-list", 'course'); // 🔹 Mostra 10 cursos recomendados
 
         } catch (error) {
             console.error("Erro ao buscar cursos recomendados:", error);
@@ -155,6 +155,42 @@ document.querySelector(".back-button").addEventListener("click", () => {
     document.querySelector(".search-bar").style.display = "flex";  // Exibe a header novamente
     document.querySelectorAll(".section-title").forEach(item => {item.style.display = "flex";}) 
 });
+
+// FUNÇÃO PARA OUVIR O EVENTO DE CLICK NO BOTÃO
+// function addCourseInWish(course) {
+//     const btnAdd = document.querySelector(".btn-add")
+//     btnAdd.addEventListener("click", () => {
+//         // DEIXAR O ID DO USUÁRIO DINÂMICO
+//         addWishToList('6a90b9da-f624-4487-b67c-9789228f8c2f', course.course_id)
+//         btnAdd.innerHTML = `<strong>Adicionado!</strong>${course}`
+//     })
+// }
+
+// FUNÇÃO ASSÍNCRONA PARA ADICIONAR CURSO A LISTA DE INTERESSE
+// async function addWishToList(userId, courseId) {
+//     try {
+//         const response = await fetch(`${config.backendUrl}/add_wish_in_list`, {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({
+//                 user_id: userId,
+//                 course_id: courseId
+//             })
+//         });
+
+//         const data = await response.json()
+//         if(response.ok) {
+//             console.log('🆗', data.message)
+//         } else {
+//             console.error("Error:", data.message)
+//         }
+
+//     }catch (error) {
+//         console.error("Erro ao adicionar à wishlist", error)
+//     }
+// }
 
 
 // 🔹 Chama a função ao carregar a página

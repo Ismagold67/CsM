@@ -1,5 +1,5 @@
 // 🔹 Função para renderizar cursos dinamicamente em todas as divs com determinada classe, evitando repetições
-function renderCourses(courses, containerClass) {
+function renderCourses(courses, containerClass, divname) {
     const containers = document.querySelectorAll(`.${containerClass}`);
     if (!containers.length) return; // 🔹 Se não houver containers, sai da função
 
@@ -16,7 +16,7 @@ function renderCourses(courses, containerClass) {
 
         coursesToRender.forEach(course => {
             const courseCard = document.createElement("div");
-            courseCard.classList.add("course");
+            courseCard.classList.add(`${divname}`);
 
             // 🔹 Obtém a média da avaliação e gera as estrelas com FontAwesome
             const rating = Number(course.average_rating || 0).toFixed(1);
@@ -25,9 +25,11 @@ function renderCourses(courses, containerClass) {
             courseCard.innerHTML = `
                 <div class="loader"></div> <!-- Loader aparece antes da imagem -->
                 <img src="${course.url_capa_curso}" alt="Curso" style="display: none;">
-                <h3><strong>${course.course_title}</strong></h3>
-                <p><strong>Criador: ${course.instructor_name}</strong></p>
-                <p class="stars"><strong>Avaliação: ${rating} ${starsHTML}</strong></p>
+                <div class='content-wish'>
+                    <h3><strong>${course.course_title}</strong></h3>
+                    <p><strong>Criador: ${course.instructor_name}</strong></p>
+                    <p class="stars"><strong>Avaliação: ${rating} ${starsHTML}</strong></p>
+                <div>
             `;
 
             // 🔹 Seleciona os elementos dentro do card

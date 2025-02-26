@@ -110,6 +110,14 @@ body {
     padding-bottom: 10px;
 }
 
+.wish-list {
+    display: block;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
 /* Aplicado ao elemento desejado, por exemplo, com a classe 'scroll-hide' */
 .scroll-hide {
     overflow: auto;               /* Permite o scroll */
